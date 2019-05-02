@@ -1,0 +1,61 @@
+! Colour Palette !
+!----------------!
+
+! Background
+#define BG_BLACK  #101010
+#define BG_RED    #A02020
+#define BG_GREEN  #20A020
+#define BG_ORANGE #B09000
+#define BG_BLUE   #2020A0
+#define BG_PINK   #A02080
+#define BG_CYAN   #009090
+#define BG_WHITE  #D0D0D0
+
+
+! Foreground
+#define FG_BLACK  #404040
+#define FG_RED    #F06060
+#define FG_GREEN  #60F060
+#define FG_ORANGE #F0B000
+#define FG_BLUE   #6060F0
+#define FG_PINK   #F060B0
+#define FG_CYAN   #00D0D0
+#define FG_WHITE  #F0F0F0
+
+
+! Colour Setting !
+!----------------!
+*color0:  BG_BLACK
+*color8:  FG_BLACK
+
+*color1:  BG_RED
+*color9:  FG_RED
+
+*color2:  BG_GREEN
+*color10: FG_GREEN
+
+*color3:  BG_ORANGE
+*color11: FG_ORANGE
+
+*color4:  BG_BLUE
+*color12: FG_BLUE
+
+*color5:  BG_PINK
+*color13: FG_PINK
+
+*color6:  BG_CYAN
+*color14: FG_CYAN
+
+*color7:  BG_WHITE
+*color15: FG_WHITE
+
+*background: BG_BLACK
+*foreground: FG_WHITE
+
+URxvt*font: xft:Inconsolata:size=12,xft:fontawesome:size=11
+URxvt*scrollBar: false
+URxvt*cursorUnderline: true
+URxvt.keysym.Control-Up:    \033[1;5A
+URxvt.keysym.Control-Down:  \033[1;5B
+URxvt.keysym.Control-Left:  \033[1;5D
+URxvt.keysym.Control-Right: \033[1;5C

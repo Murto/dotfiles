@@ -1,0 +1,123 @@
+;=====================================================
+;
+;   To learn more about how to configure Polybar
+;   go to https://github.com/jaagr/polybar
+;
+;   The README contains alot of information
+;
+;=====================================================
+
+[colours]
+foreground = ${xrdb:foreground}
+background = ${xrdb:background}
+
+border = ${xrdb:color3}
+BG_BLACK = ${xrdb:color0}
+BG_RED = ${xrdb:color1}
+BG_GREEN = ${xrdb:color2}
+BG_GOLD = ${xrdb:color3}
+BG_BLUE = ${xrdb:color4}
+BG_PINK = ${xrdb:color5}
+BG_SILVER = ${xrdb:color6}
+BG_WHITE = ${xrdb:color7}
+
+FG_BLACK = ${xrdb:color8}
+FG_RED = ${xrdb:color9}
+FG_GREEN = ${xrdb:color10}
+FG_GOLD = ${xrdb:color11}
+FG_BLUE = ${xrdb:color12}
+FG_PINK = ${xrdb:color13}
+FG_SILVER = ${xrdb:color14}
+FG_WHITE = ${xrdb:color15}
+
+warning = #B33A3A
+caution = #FF7000
+safe = #00DD33
+
+[global/wm]
+margin-bottom = 0
+margin-top = 0
+
+[bar/rider]
+width = 100%:-500
+height = 30
+bottom = false
+
+fixed-center = false ;TODO: Try this out
+
+background = ${colours.background}
+foreground = ${colours.foreground}
+
+radius = 0.0
+
+line-size = 5
+line-color = #FFFFFF
+
+border-size = 4
+border-color = ${colours.FG_PINK}
+
+padding = 5
+module-margin-left = 5
+
+font-0 = Inconsolata:size=12
+font-1 = FontAwesome:size=11
+
+modules-left =
+modules-center =
+modules-right = battery date
+
+separator =
+
+dim-value = 1
+
+enable-ipc = false
+
+override-redirect = false
+wm-restack = i3
+
+
+[module/date]
+type = internal/date
+
+interval = 1.0
+
+date =
+time = %T
+
+date-alt = %A %B %Y
+time-alt = %T
+
+format = <label>
+format-prefix = ""
+
+label = %date% %time%
+
+
+
+[module/battery]
+type = internal/battery
+
+battery = BAT0
+adapter = AC
+full-at = 100
+
+poll-interval = 5
+
+format-charging = <label-charging>
+format-discharging = <ramp-capacity> <label-discharging>
+format-full = <ramp-capacity> <label-full>
+
+format-charging-prefix = " "
+format-charging-prefix-foreground = ${colours.safe}
+label-charging = %percentage%%
+label-discharging = %percentage%%
+label-full = %percentage%%
+
+ramp-capacity-0 = 
+ramp-capacity-0-foreground = ${colours.warning}
+ramp-capacity-1 = 
+ramp-capacity-1-foreground = ${colours.caution}
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+ramp-capacity-4-foreground = ${colours.safe}
