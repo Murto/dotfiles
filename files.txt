@@ -1,0 +1,7 @@
+.bashrc
+.vimrc
+.Xresources
+.config/bspwm
+.config/compton.conf
+.config/polybar
+.config/sxhkd
