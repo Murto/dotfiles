@@ -8,8 +8,8 @@
 ;=====================================================
 
 [colours]
-foreground = ${xrdb:foreground}
-background = ${xrdb:background}
+foreground = #F0F0F0
+background = #101010
 
 primary = #F0E68C
 secondary = #FFFF60
@@ -44,12 +44,12 @@ padding = 5
 module-margin-left = 5
 
 font-0 = Inconsolata:size=14;3
-font-1 = Kochi Gothic:size=12:weight=bold;3
+font-1 = Takao Mincho:size=12:weight=bold;3
 font-2 = FontAwesome:size=12;3
 
 modules-left = bspwm
 modules-center = 
-modules-right = volume battery date
+modules-right = pulseaudio battery date
 
 separator =
 
@@ -152,21 +152,16 @@ label-separator-padding = 1
 
 
 
-[module/volume]
-type = internal/volume
+[module/pulseaudio]
+type = internal/pulseaudio
 
-master-soundcard = default
-speaker-soundcard = default
-headphone-soundcard = default
+interval = 5
 
-master-mixer = Master
-
-mapped = false
+use-ui-max = true
 
 format-volume = <label-volume>
 format-volume-prefix = " "
 
 format-muted = <label-muted>
 format-muted-prefix = " "
-
 

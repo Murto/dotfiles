@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/home/murto/git/FAL/src'
+let g:netrw_dirhist_2='/home/murto'
+let g:netrw_dirhist_3='/home/murto/git/FAL/include'
+let g:netrw_dirhist_4='/home/murto/git/FAL/build'
+let g:netrw_dirhist_5='/home/murto/git/concurrency-patterns/monitor/src'

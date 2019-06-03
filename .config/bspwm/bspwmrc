@@ -24,6 +24,9 @@ bspc config gapless_monocle      true
 # Processes #
 #############
 
+# Merge .Xresources
+xrdb -merge $HOME/.Xresources
+
 # Polybar (bar)
 $HOME/.config/polybar/launch.sh
 
